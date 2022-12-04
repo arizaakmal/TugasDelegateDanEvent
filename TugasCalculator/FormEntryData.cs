@@ -48,9 +48,9 @@ namespace TugasCalculator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // jika data baru, inisialisasi objek mahasiswa
+            
             if (isNewData) cal = new Calculator();
-            // set nilai property objek mahasiswa yg diambil dari TextBox
+            
             if(operasi.Text == "Penjumlahan")
             {
                 cal.Hasil = "Hasil Penjumlahan " + txtNilaiA.Text + " + " + txtNilaiB.Text + " = " + (int.Parse(txtNilaiA.Text) + int.Parse(txtNilaiB.Text));
@@ -68,9 +68,9 @@ namespace TugasCalculator
                 cal.Hasil = "Hasil Pembagian " + txtNilaiA.Text + " : " + txtNilaiB.Text + " = " + (int.Parse(txtNilaiA.Text) / int.Parse(txtNilaiB.Text));
             }
 
-            if (isNewData) // data baru
+            if (isNewData) 
             {
-                onCreate(cal); // panggil event OnCreate
+                onCreate(cal); 
             }
             
         }
